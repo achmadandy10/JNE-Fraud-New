@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>@yield('title') - JNE</title>
+    <title>@yield('title') - Fraud JNE</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -30,13 +30,6 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: NiceAdmin - v2.2.1
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -231,10 +224,6 @@
             &copy; Copyright {{ date('Y') }} <strong><span>JNE</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
             Designed by <a href="https://www.sakataguna.com/web/index.php">Sakata Guna Kita</a>
         </div>
     </footer><!-- End Footer -->
