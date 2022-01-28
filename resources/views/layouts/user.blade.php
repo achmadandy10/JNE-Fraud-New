@@ -164,22 +164,22 @@
                 </a>
                 <ul id="litigation-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="{{ route("user.litigation.customer_dispute") }}">
                             <i class="bi bi-circle"></i><span>Customer Dispute</span>
                         </a>
                     </li>
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="{{ route("user.litigation.fraud") }}">
                             <i class="bi bi-circle"></i><span>Fraud</span>
                         </a>
                     </li>
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="{{ route("user.litigation.outstanding") }}">
                             <i class="bi bi-circle"></i><span>Outstanding</span>
                         </a>
                     </li>
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="{{ route("user.litigation.other") }}">
                             <i class="bi bi-circle"></i><span>Other</span>
                         </a>
                     </li>
@@ -192,12 +192,12 @@
                 </a>
                 <ul id="permit-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="{{ route("user.permit.new_permit") }}">
                             <i class="bi bi-circle"></i><span>Perizinan Baru</span>
                         </a>
                     </li>
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="{{ route("user.permit.renew_permit") }}">
                             <i class="bi bi-circle"></i><span>Perpanjangan</span>
                         </a>
                     </li>

@@ -82,7 +82,7 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100" type="submit">Login</button>
+                                            <button class="btn btn-primary w-100" type="submit" onclick="window.location.href = '{{ route('user.dashboard') }}'">Login</button>
                                         </div>
                                     </form>
 

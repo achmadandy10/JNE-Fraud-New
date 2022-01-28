@@ -37,6 +37,34 @@ Route::prefix('user')->group(function () {
             return view('user.drafting.lease');
         })->name("user.drafting.lease");
     });
+
+    Route::prefix('litigation')->group(function () {
+        Route::get('/customer-dispute', function () {
+            return view('user.litigation.customer_dispute');
+        })->name("user.litigation.customer_dispute");
+        
+        Route::get('/fraud', function () {
+            return view('user.litigation.fraud');
+        })->name("user.litigation.fraud");
+
+        Route::get('/outstanding', function () {
+            return view('user.litigation.outstanding');
+        })->name("user.litigation.outstanding");
+
+        Route::get('/other', function () {
+            return view('user.litigation.other');
+        })->name("user.litigation.other");
+    });
+
+    Route::prefix('permit')->group(function () {
+        Route::get('/perizinan-baru', function () {
+            return view('user.permit.new_permit');
+        })->name("user.permit.new_permit");
+        
+        Route::get('/perpanjangan', function () {
+            return view('user.permit.renew_permit');
+        })->name("user.permit.renew_permit");
+    });
 });
 
 Route::get('/', function () {
