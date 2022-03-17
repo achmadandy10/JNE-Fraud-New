@@ -23,7 +23,7 @@ Route::prefix('user')->group(function () {
     Route::get('/', function () {
         return view('user.index');
     })->name("user.dashboard");
-    
+
     Route::prefix('drafting')->group(function () {
         Route::get('/customer', function () {
             return view('user.drafting.customer');
@@ -42,7 +42,7 @@ Route::prefix('user')->group(function () {
         Route::get('/customer-dispute', function () {
             return view('user.litigation.customer_dispute');
         })->name("user.litigation.customer_dispute");
-        
+
         Route::get('/fraud', function () {
             return view('user.litigation.fraud');
         })->name("user.litigation.fraud");
@@ -60,7 +60,7 @@ Route::prefix('user')->group(function () {
         Route::get('/perizinan-baru', function () {
             return view('user.permit.new_permit');
         })->name("user.permit.new_permit");
-        
+
         Route::get('/perpanjangan', function () {
             return view('user.permit.renew_permit');
         })->name("user.permit.renew_permit");
@@ -68,9 +68,5 @@ Route::prefix('user')->group(function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/login', function () {
     return view('login');
 });

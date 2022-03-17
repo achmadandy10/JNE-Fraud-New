@@ -38,7 +38,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href={{ route("user.dashboard") }} class="logo d-flex align-items-center">
+            <a href={{ route('user.dashboard') }} class="logo d-flex align-items-center">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="">
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -63,7 +63,8 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="{{ asset('https://ui-avatars.com/api/?name=Achmad-Andybackground=0D8ABC&color=fff') }}" alt="Profile" class="rounded-circle">
+                        <img src="{{ asset('https://ui-avatars.com/api/?name=Achmad-Andybackground=0D8ABC&color=fff') }}"
+                            alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">A.A. Dekanovy</span>
                     </a><!-- End Profile Iamge Icon -->
 
@@ -127,7 +128,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="{{ route("user.dashboard") }}">
+                <a class="nav-link " href="{{ route('user.dashboard') }}">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
@@ -140,22 +141,53 @@
                 </a>
                 <ul id="drafting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route("user.drafting.customer") }}">
-                            <i class="bi bi-circle"></i><span>Customer</span>
+                        <a href="{{ route('user.drafting.customer') }}">
+                            <span>Customer</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route("user.drafting.vendor_and_supplier") }}">
-                            <i class="bi bi-circle"></i><span>Vendor & Supplier</span>
+                        <a href="{{ route('user.drafting.vendor_and_supplier') }}">
+                            <span>Vendor & Supplier</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route("user.drafting.lease") }}">
-                            <i class="bi bi-circle"></i><span>Lease</span>
+                        <a href="{{ route('user.drafting.lease') }}">
+                            <span>Lease</span>
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Drafting Nav -->
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#database-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-file-earmark-text"></i><span>Database</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="database-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('user.drafting.customer') }}">
+                            <span>Dokumen Baru</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('user.drafting.vendor_and_supplier') }}">
+                            <span>Vendor & Supplier</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('user.drafting.lease') }}">
+                            <span>Lease</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('user.drafting.customer') }}">
+                    <i class="bi bi-file-earmark-text"></i><span>Upload Banner</span><i
+                        class="bi bi-chevron-right ms-auto"></i>
+                </a>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#litigation-nav" data-bs-toggle="collapse" href="#">
@@ -164,23 +196,23 @@
                 </a>
                 <ul id="litigation-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route("user.litigation.customer_dispute") }}">
-                            <i class="bi bi-circle"></i><span>Customer Dispute</span>
+                        <a href="{{ route('user.litigation.customer_dispute') }}">
+                            <span>Customer Dispute</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route("user.litigation.fraud") }}">
-                            <i class="bi bi-circle"></i><span>Fraud</span>
+                        <a href="{{ route('user.litigation.fraud') }}">
+                            <span>Fraud</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route("user.litigation.outstanding") }}">
-                            <i class="bi bi-circle"></i><span>Outstanding</span>
+                        <a href="{{ route('user.litigation.outstanding') }}">
+                            <span>Outstanding</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route("user.litigation.other") }}">
-                            <i class="bi bi-circle"></i><span>Other</span>
+                        <a href="{{ route('user.litigation.other') }}">
+                            <span>Other</span>
                         </a>
                     </li>
                 </ul>
@@ -192,13 +224,13 @@
                 </a>
                 <ul id="permit-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route("user.permit.new_permit") }}">
-                            <i class="bi bi-circle"></i><span>Perizinan Baru</span>
+                        <a href="{{ route('user.permit.new_permit') }}">
+                            <span>Perizinan Baru</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route("user.permit.renew_permit") }}">
-                            <i class="bi bi-circle"></i><span>Perpanjangan</span>
+                        <a href="{{ route('user.permit.renew_permit') }}">
+                            <span>Perpanjangan</span>
                         </a>
                     </li>
                 </ul>
