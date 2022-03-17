@@ -113,7 +113,7 @@
                         <div class="col-md-10">
                             <div class="row mb-3">
                                 <select name="" id="" class="form-control">
-                                    <option value="#">--Pilih--</option>
+                                    <option value="#" selected disabled>--Pilih--</option>
                                     <option value="#">Kecurangan Laporan Keuangan</option>
                                     <option value="">Penyalahgunaan Aset</option>
                                     <option value="">Korupsi</option>
