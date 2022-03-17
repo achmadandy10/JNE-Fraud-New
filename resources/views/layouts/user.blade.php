@@ -137,7 +137,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#drafting-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-file-earmark-text"></i><span>Drafting</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
+                        class="bi bi-chevron-double-down ms-auto"></i>
                 </a>
                 <ul id="drafting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -161,7 +161,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#database-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-file-earmark-text"></i><span>Database</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
+                        class="bi bi-chevron-double-down ms-auto"></i>
                 </a>
                 <ul id="database-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -169,30 +169,13 @@
                             <span>Dokumen Baru</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ route('user.drafting.vendor_and_supplier') }}">
-                            <span>Vendor & Supplier</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('user.drafting.lease') }}">
-                            <span>Lease</span>
-                        </a>
-                    </li>
                 </ul>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('user.drafting.customer') }}">
-                    <i class="bi bi-file-earmark-text"></i><span>Upload Banner</span><i
-                        class="bi bi-chevron-right ms-auto"></i>
-                </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#litigation-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-file-earmark-text"></i><span>Litigation</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
+                        class="bi bi-chevron-double-down ms-auto"></i>
                 </a>
                 <ul id="litigation-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -220,7 +203,8 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#permit-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-file-earmark-text"></i><span>Permit</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-file-earmark-text"></i><span>Permit</span><i
+                        class="bi bi-chevron-double-down ms-auto"></i>
                 </a>
                 <ul id="permit-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -234,7 +218,14 @@
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Permit Nav -->
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('user.banner.index') }}">
+                    <i class="bi bi-file-earmark-text"></i><span>Upload Banner</span><i
+                        class="bi bi-chevron-double-right ms-auto"></i>
+                </a>
+            </li>
         </ul>
 
     </aside><!-- End Sidebar-->

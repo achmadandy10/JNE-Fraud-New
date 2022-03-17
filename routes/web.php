@@ -65,6 +65,12 @@ Route::prefix('user')->group(function () {
             return view('user.permit.renew_permit');
         })->name("user.permit.renew_permit");
     });
+
+    Route::prefix('banner')->group(function () {
+        Route::get('/upload-banner', function () {
+            return view('user.banner.index');
+        })->name("user.banner.index");
+    });
 });
 
 Route::get('/', function () {
