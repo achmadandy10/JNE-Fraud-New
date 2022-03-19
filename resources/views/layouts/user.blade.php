@@ -13,6 +13,11 @@
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.5/datatables.min.js"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link
@@ -65,12 +70,12 @@
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="{{ asset('https://ui-avatars.com/api/?name=Achmad-Andybackground=0D8ABC&color=fff') }}"
                             alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">A.A. Dekanovy</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Achmad Andy Dekanovy</h6>
+                            <h6>Super Admin</h6>
                             <span>Karyawan</span>
                         </li>
                         <li>
@@ -165,7 +170,14 @@
                 </a>
                 <ul id="database-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route('user.drafting.customer') }}">
+                        <a href="{{ route('database-index') }}">
+                            <span>List Peraturan</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="database-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('database-create') }}">
                             <span>Dokumen Baru</span>
                         </a>
                     </li>

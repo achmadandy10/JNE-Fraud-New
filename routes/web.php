@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DatabaseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,6 +71,15 @@ Route::prefix('user')->group(function () {
         Route::get('/upload-banner', function () {
             return view('user.banner.index');
         })->name("user.banner.index");
+    });
+
+    Route::prefix('database')->group(function () {
+        Route::get('/', [DatabaseController::class, 'index'])->name('database-index');
+
+        Route::get('/create', [DatabaseController::class, 'create'])->name('database-create');
+        Route::post('/create/store', [DatabaseController::class, 'store'])->name('database-store');
+
+        Route::get('/detail/{id}', [DatabaseController::class, 'detail'])->name('database-detail');
     });
 });
 
