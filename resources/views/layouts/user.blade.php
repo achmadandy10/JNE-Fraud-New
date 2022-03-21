@@ -43,7 +43,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href={{ route('user.dashboard') }} class="logo d-flex align-items-center">
+            <a href={{ route('dashboard') }} class="logo d-flex align-items-center">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="">
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -133,13 +133,13 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="{{ route('user.dashboard') }}">
+                <a class="nav-link " href="{{ route('dashboard') }}">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#drafting-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-file-earmark-text"></i><span>Drafting</span><i
                         class="bi bi-chevron-double-down ms-auto"></i>
@@ -161,7 +161,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#database-nav" data-bs-toggle="collapse" href="#">
@@ -184,7 +184,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#litigation-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-file-earmark-text"></i><span>Litigation</span><i
                         class="bi bi-chevron-double-down ms-auto"></i>
@@ -211,9 +211,9 @@
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Litigation Nav -->
+            </li><!-- End Litigation Nav --> --}}
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#permit-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-file-earmark-text"></i><span>Permit</span><i
                         class="bi bi-chevron-double-down ms-auto"></i>
@@ -230,7 +230,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('user.banner.index') }}">

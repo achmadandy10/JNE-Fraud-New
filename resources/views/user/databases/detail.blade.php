@@ -17,74 +17,63 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Jenis</label>
-                                    <input type="text" name="date" value="{{ $data->type }}" class="form-control"
-                                        readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Entitas</label>
-                                    <input type="text" name="title" value="{{ $data->entity }}" class="form-control"
-                                        readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Nomor</label>
-                                    <input type="text" name="title" value="{{ $data->number }}" class="form-control"
-                                        readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Tahun</label>
-                                    <input type="text" name="author" value="{{ $data->year }}" class="form-control"
-                                        readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Judul</label>
-                                    <textarea class="form-control" name="body" id="body" cols="5" rows="3" readonly>{{ $data->title }}</textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Ditetapkan Tanggal</label>
-                                    <input type="text" name="title" value="{{ $data->set_date }}" class="form-control"
-                                        readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Diundangkan Tanggal</label>
-                                    <input type="text" name="title" value="{{ $data->promulgated_date }}"
-                                        class="form-control" readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Berlaku Tanggal</label>
-                                    <input type="text" name="author" value="{{ $data->valid_date }}"
-                                        class="form-control" readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Sumber</label>
-                                    <input type="text" name="title" value="{{ $data->source }}" class="form-control"
-                                        readonly>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">File</label>
-                                    <input type="text" name="author" value="{{ $data->file }}" class="form-control"
-                                        readonly>
-                                </div>
-                            </div>
+                            <label class="col-sm-3 col-form-label fw-bold">Nama Peraturan</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->name }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Jenis</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->type }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Entitas</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->entity }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Nomor Peraturan</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->number }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Tahun Peraturan</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->year }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Tentang</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->title }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Ditetapkan Tanggal </label>
+                            <label class="col-sm-9 col-form-label">{{ $data->set_date }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Diundangkan Tanggal</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->promulgated_date }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Berlaku Tanggal</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->valid_date }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Sumber</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->source }}</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label fw-bold">Status</label>
+                            <label class="col-sm-9 col-form-label">{{ $data->status }}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">File-File Peraturan</h5>
+                <!-- Horizontal Form -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <ul class="list-group list-group-flush">
+                                <li class="col-md-12 list-group-item">{{ $data->file }}</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

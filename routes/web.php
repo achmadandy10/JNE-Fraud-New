@@ -21,9 +21,7 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::prefix('user')->group(function () {
-    Route::get('/', function () {
-        return view('user.index');
-    })->name("user.dashboard");
+    Route::get('/', [DatabaseController::class, 'dashboard'])->name('dashboard');
 
     Route::prefix('drafting')->group(function () {
         Route::get('/customer', function () {
@@ -80,6 +78,11 @@ Route::prefix('user')->group(function () {
         Route::post('/create/store', [DatabaseController::class, 'store'])->name('database-store');
 
         Route::get('/detail/{id}', [DatabaseController::class, 'detail'])->name('database-detail');
+
+        Route::get('/edit/{id}', [DatabaseController::class, 'edit'])->name('database-edit');
+        Route::post('/edit/{id}', [DatabaseController::class, 'update'])->name('database-update');
+
+        Route::get('/destroy/{id}', [DatabaseController::class, 'destroy'])->name('database-destroy');
     });
 });
 

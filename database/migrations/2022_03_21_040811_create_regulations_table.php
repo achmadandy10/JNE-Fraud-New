@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRegulationTable extends Migration
+class CreateRegulationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRegulationTable extends Migration
      */
     public function up()
     {
-        Schema::create('regulation', function (Blueprint $table) {
+        Schema::create('regulations', function (Blueprint $table) {
             $table->string('id')->unique();
 
             $table->string('name');
@@ -26,6 +26,7 @@ class CreateRegulationTable extends Migration
             $table->date('promulgated_date');
             $table->date('valid_date');
             $table->string('source');
+            $table->string('status');
             $table->string('file');
 
             $table->timestamps();
@@ -39,6 +40,6 @@ class CreateRegulationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regulation');
+        Schema::dropIfExists('regulations');
     }
 }

@@ -30,21 +30,18 @@
                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Report <span>| Today</span></h5>
+                        <h5 class="card-title">Preview</h5>
 
                         <div class="d-flex align-items-center">
                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                 <i class="bi bi-file-earmark-text"></i>
                             </div>
                             <div class="ps-3">
-                                <h6>145</h6>
-                                <span class="text-success small pt-1 fw-bold">12%</span> <span
-                                    class="text-muted small pt-2 ps-1">increase</span>
-
+                                <h6>{{ $regulationcount }}</h6>
+                                <span class="text-muted small pt-2">Dokumen</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div><!-- End Sales Card -->
 
@@ -66,47 +63,26 @@
                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Recent Document <span>| Today</span></h5>
-
-                        <table class="table table-borderless datatable">
+                        <h5 class="card-title">Dokumen Terbaru</h5>
+                        <table class="table table-borderless">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
+                                    <th scope="col">No</th>
                                     <th scope="col">Nama Dokumen</th>
                                     <th scope="col">Status</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><a href="#">#2457</a></th>
-                                    <td>Dokumen 1</td>
-                                    <td><span class="badge bg-success">Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><a href="#">#2147</a></th>
-                                    <td>Dokumen 2</td>
-                                    <td><span class="badge bg-warning">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><a href="#">#2049</a></th>
-                                    <td>Dokumen 3</td>
-                                    <td><span class="badge bg-success">Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><a href="#">#2644</a></th>
-                                    <td>Dokumen 4</td>
-                                    <td><span class="badge bg-danger">Rejected</span></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><a href="#">#2644</a></th>
-                                    <td>Dokumen 5</td>
-                                    <td><span class="badge bg-success">Approved</span></td>
-                                </tr>
-                            </tbody>
+                            @foreach ($recentdoc as $data)
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">{{ $data->id }}</a></th>
+                                        <td>{{ $data->name }}</td>
+                                        <td><span class="badge bg-success">{{ $data->status }}</span></td>
+                                    </tr>
+                                </tbody>
+                            @endforeach
                         </table>
-
                     </div>
-
                 </div>
             </div><!-- End Recent Sales -->
 

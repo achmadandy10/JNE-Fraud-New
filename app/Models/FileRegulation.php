@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Regulation extends Model
+class FileRegulation extends Model
 {
     use HasFactory;
 
@@ -16,18 +16,13 @@ class Regulation extends Model
 
     public $incrementing = false;
 
-    protected $table = 'regulations';
-
-    // public function files()
-    // {
-    //     return $this->hasMany(Regulation::class, 'regulation_id', 'id');
-    // }
+    protected $table = 'file_regulations';
 
     public static function boot()
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->id = IdGenerator::generate(['table' => 'regulations', 'length' => 5, 'prefix' => 'RG', 'reset_on_prefix_change'=>true]);
+            $model->id = IdGenerator::generate(['table' => 'file_regulations', 'length' => 5, 'prefix' => 'FRG', 'reset_on_prefix_change'=>true]);
         });
     }
 }
