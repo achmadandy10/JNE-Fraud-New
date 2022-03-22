@@ -19,7 +19,7 @@ class CreateFileRegulationsTable extends Migration
             $table->string('regulation_id');
             $table->string('file');
 
-            // $table->foreign('regulation_id')->references('id')->on('regulations')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('regulation_id')->references('id')->on('regulations')->onUpdate('cascade')->onDelete('cascade');
 
             $table->timestamps();
         });

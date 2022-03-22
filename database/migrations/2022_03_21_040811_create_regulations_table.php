@@ -26,8 +26,6 @@ class CreateRegulationsTable extends Migration
             $table->date('promulgated_date');
             $table->date('valid_date');
             $table->string('source');
-            $table->string('status');
-            $table->string('file');
 
             $table->timestamps();
         });

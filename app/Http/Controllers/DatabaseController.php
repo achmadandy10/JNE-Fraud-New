@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use App\Models\Regulation;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class DatabaseController extends Controller
 {
@@ -65,26 +66,40 @@ class DatabaseController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $data = $request->all();
+    {   
+        $regulation = Regulation::create([
+            'name' => $request->name,
+            'type' => $request->type,
+            'entity' => $request->entity,
+            'number' => $request->number,
+            'year' => $request->year,
+            'title' => $request->title,
+            'set_date' => $request->set_date,
+            'promulgated_date' => $request->promulgated_date,
+            'valid_date' => $request->valid_date,
+            'source' => $request->source,
+            'status' => $request->status,
+        ]);
+    
+        $files = $request->file('file');
 
-        $filename = $request->file('file')->getClientOriginalName();
+        foreach ($files as $file) {
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '-' . '.' . $extension;
+            $file->move('regulation', $filename);
 
-        $data['file'] = $request->file('file')->storeAs('public/regulation', $filename, 'public');
-
-        Regulation::create($data);
-
-        // FileRegulation::create([
-        //     'regulation_id' => $regulation->id,
-        //     'file' => $photo
-        // ]);
+            FileRegulation::create([
+                'regulation_id' => $regulation->id,
+                'file' => 'regulation/'.$filename
+            ]);
+        }
 
         return redirect()->route('dashboard');
     }
 
     public function detail($id)
     {
-        $data = Regulation::findOrFail($id);
+        $data = Regulation::where('id', $id)->with('files')->first();
 
         return view('user.databases.detail', [
             'data' => $data

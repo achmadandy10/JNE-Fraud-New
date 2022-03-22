@@ -10,7 +10,7 @@ class Regulation extends Model
 {
     use HasFactory;
 
-    protected $guarded = [''];
+    protected $guarded = ['id'];
 
     protected $primaryKey = 'id';
 
@@ -18,10 +18,10 @@ class Regulation extends Model
 
     protected $table = 'regulations';
 
-    // public function files()
-    // {
-    //     return $this->hasMany(Regulation::class, 'regulation_id', 'id');
-    // }
+    public function files()
+    {
+        return $this->hasMany(FileRegulation::class);
+    }
 
     public static function boot()
     {

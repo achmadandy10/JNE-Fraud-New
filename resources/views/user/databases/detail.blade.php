@@ -72,7 +72,11 @@
                     <div class="col-md-12">
                         <div class="row">
                             <ul class="list-group list-group-flush">
-                                <li class="col-md-12 list-group-item">{{ $data->file }}</li>
+                                @foreach ($data->files as $row)
+                                    <li class="col-md-12 list-group-item">
+                                        <a href={{ asset($row->file) }} target="_blank">Lihat</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

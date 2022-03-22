@@ -96,7 +96,7 @@
                             <div class="row mb-3">
                                 <label class="col-sm-3 col-form-label">File</label>
                                 <div class="col-sm-9">
-                                    <input type="file" name="file" class="form-control">
+                                    <input type="file" multiple name="file[]" class="form-control">
                                 </div>
                             </div>
                         </div>

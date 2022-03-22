@@ -10,13 +10,18 @@ class FileRegulation extends Model
 {
     use HasFactory;
 
-    protected $guarded = [''];
+    protected $guarded = ['id'];
 
     protected $primaryKey = 'id';
 
     public $incrementing = false;
 
     protected $table = 'file_regulations';
+
+    public function regulation()
+    {
+        return $this->belongsTo(Regulation::class);
+    }
 
     public static function boot()
     {
