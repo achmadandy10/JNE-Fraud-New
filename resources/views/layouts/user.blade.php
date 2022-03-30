@@ -127,7 +127,6 @@
 
     </header><!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
@@ -184,6 +183,27 @@
                 </ul>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#database-navss" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-file-earmark-text"></i><span>Informasi</span><i
+                        class="bi bi-chevron-double-down ms-auto"></i>
+                </a>
+                <ul id="database-navss" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('law-index') }}">
+                            <span>Klinik Hukum</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="database-navss" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('qna-index') }}">
+                            <span>QnA</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             {{-- <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#litigation-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-file-earmark-text"></i><span>Litigation</span><i
@@ -233,14 +253,14 @@
             </li> --}}
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('user.banner.index') }}">
+                <a class="nav-link collapsed" href="{{ route('banner-index') }}">
                     <i class="bi bi-file-earmark-text"></i><span>Upload Banner</span><i
                         class="bi bi-chevron-double-right ms-auto"></i>
                 </a>
             </li>
         </ul>
 
-    </aside><!-- End Sidebar-->
+    </aside>
 
     <main id="main" class="main">
 

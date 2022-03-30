@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DatabaseController;
+use App\Http\Controllers\InformationController;
+use App\Http\Controllers\QnAController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,9 +69,19 @@ Route::prefix('user')->group(function () {
     });
 
     Route::prefix('banner')->group(function () {
-        Route::get('/upload-banner', function () {
-            return view('user.banner.index');
-        })->name("user.banner.index");
+        Route::get('/upload-banner', [BannerController::class, 'index'])->name('banner-index');
+
+        Route::post('/upload-banner/store', [BannerController::class, 'store'])->name('banner-store');
+    });
+
+    Route::prefix('information')->group(function () {
+        Route::get('/law', [InformationController::class, 'index'])->name('law-index');
+        Route::get('/law/create', [InformationController::class, 'create'])->name('law-create');
+        Route::post('/law/create/store', [InformationController::class, 'store'])->name('law-store');
+
+        Route::get('/qna', [QnAController::class, 'index'])->name('qna-index');
+        Route::get('/qna/create', [QnAController::class, 'create'])->name('qna-create');
+        Route::post('/qna/create/store', [QnAController::class, 'store'])->name('qna-store');
     });
 
     Route::prefix('database')->group(function () {
