@@ -77,11 +77,15 @@ Route::prefix('user')->group(function () {
     Route::prefix('information')->group(function () {
         Route::get('/law', [InformationController::class, 'index'])->name('law-index');
         Route::get('/law/create', [InformationController::class, 'create'])->name('law-create');
+        Route::get('/law/detail/{id}', [InformationController::class, 'detail'])->name('law-detail');
         Route::post('/law/create/store', [InformationController::class, 'store'])->name('law-store');
+        Route::get('/law/destroy/{id}', [InformationController::class, 'destroy'])->name('law-destroy');
 
         Route::get('/qna', [QnAController::class, 'index'])->name('qna-index');
         Route::get('/qna/create', [QnAController::class, 'create'])->name('qna-create');
+        Route::get('/qna/detail/{id}', [QnAController::class, 'detail'])->name('qna-detail');
         Route::post('/qna/create/store', [QnAController::class, 'store'])->name('qna-store');
+        Route::get('/qna/destroy/{id}', [QnAController::class, 'destroy'])->name('qna-destroy');
     });
 
     Route::prefix('database')->group(function () {

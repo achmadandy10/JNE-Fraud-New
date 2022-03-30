@@ -22,9 +22,9 @@ class InformationController extends Controller
                                 Aksi
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="'.route('database-detail',$regulation->id).'">Check</a></li>
+                                <li><a class="dropdown-item" href="'.route('law-detail',$regulation->id).'">Check</a></li>
                                 <li><a class="dropdown-item" href="'.route('database-edit',$regulation->id).'">Edit</a></li>
-                                <li><a class="dropdown-item" href="'.route('database-destroy',$regulation->id).'">Delete</a></li>
+                                <li><a class="dropdown-item" href="'.route('law-destroy',$regulation->id).'">Delete</a></li>
                             </ul>
                         </div>
                     ';
@@ -47,6 +47,23 @@ class InformationController extends Controller
             'title' => $request->title,
             'body' => $request->body,
         ]);
+
+        return redirect()->route('dashboard');
+    }
+
+    public function detail($id)
+    {
+        $data = Information::where('id', $id)->first();
+
+        return view('user.law.detail', [
+            'data' => $data
+        ]);
+    }
+
+    public function destroy($id)
+    {
+        $item = Information::findOrFail($id);
+        $item->delete();
 
         return redirect()->route('dashboard');
     }

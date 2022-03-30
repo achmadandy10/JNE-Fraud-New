@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\FileRegulation;
+use App\Models\Information;
+use App\Models\QnA;
 use Carbon\Carbon;
 use App\Models\Regulation;
 use Illuminate\Http\Request;
@@ -66,7 +68,7 @@ class DatabaseController extends Controller
     }
 
     public function store(Request $request)
-    {   
+    {
         $regulation = Regulation::create([
             'name' => $request->name,
             'type' => $request->type,
@@ -80,7 +82,7 @@ class DatabaseController extends Controller
             'source' => $request->source,
             'status' => $request->status,
         ]);
-    
+
         $files = $request->file('file');
 
         foreach ($files as $file) {
@@ -109,11 +111,15 @@ class DatabaseController extends Controller
     public function dashboard()
     {
         $regulationcount = Regulation::count();
+        $qnacount = QnA::count();
+        $lawcount = Information::count();
         $recentdoc = Regulation::take(5)->get();
 
         return view('user.index', [
             'regulationcount' => $regulationcount,
-            'recentdoc' => $recentdoc
+            'recentdoc' => $recentdoc,
+            'qnacount' => $qnacount,
+            'lawcount' => $lawcount
         ]);
     }
 

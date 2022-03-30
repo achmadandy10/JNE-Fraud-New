@@ -40,6 +40,20 @@
                                 <h6>{{ $regulationcount }}</h6>
                                 <span class="text-muted small pt-2">Dokumen</span>
                             </div>
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center ms-5">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h6>{{ $lawcount }}</h6>
+                                <span class="text-muted small pt-2">Klinik Hukum</span>
+                            </div>
+                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center ms-5">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h6>{{ $qnacount }}</h6>
+                                <span class="text-muted small pt-2">QnA</span>
+                            </div>
                         </div>
                     </div>
                 </div>
