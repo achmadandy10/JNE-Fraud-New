@@ -258,6 +258,12 @@
                         class="bi bi-chevron-double-right ms-auto"></i>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('regulation-type-index') }}">
+                    <i class="bi bi-file-earmark-text"></i><span>Tipe Regulasi</span><i
+                        class="bi bi-chevron-double-right ms-auto"></i>
+                </a>
+            </li>
         </ul>
 
     </aside>

@@ -4,6 +4,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\QnAController;
+use App\Http\Controllers\RegulationTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -72,6 +73,13 @@ Route::prefix('user')->group(function () {
         Route::get('/upload-banner', [BannerController::class, 'index'])->name('banner-index');
 
         Route::post('/upload-banner/store', [BannerController::class, 'store'])->name('banner-store');
+    });
+
+    Route::prefix('regulation_type')->group(function () {
+        Route::get('/', [RegulationTypeController::class, 'index'])->name('regulation-type-index');
+        Route::get('/create', [RegulationTypeController::class, 'create'])->name('regulation-type-create');
+
+        Route::post('/create/store', [RegulationTypeController::class, 'store'])->name('regulation-type-store');
     });
 
     Route::prefix('information')->group(function () {
